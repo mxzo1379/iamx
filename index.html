@@ -898,7 +898,9 @@
             </div>
 
             <div class="row">
-              <div class="col-sm-12">사용불가(don't use it in Korea)</div>
+              <div class="col-sm-12">
+                <div id="map" style="width: 500px; height: 400px"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -928,6 +930,18 @@
     </div>
 
     <!-- Javascript files -->
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5a6d64d9e928241a84eb4de27897eb24"
+    ></script>
+    <script>
+      var container = document.getElementById("map");
+      var options = {
+        center: new kakao.maps.LatLng(37.520385739942974, 127.01596354818807),
+        level: 3,
+      };
+      var map = new kakao.maps.Map(container, options);
+    </script>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.stellar.min.js"></script>
@@ -941,7 +955,6 @@
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
     <script src="assets/js/jquery.fitvids.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
     <script src="assets/js/scripts.js"></script>
   </body>
 </html>
